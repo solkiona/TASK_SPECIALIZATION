@@ -1,0 +1,108 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='assets/stylesAbout.css')}}">
+  <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="{{url_for('static' , filename='assets/styles.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+</head>
+<body>
+
+    <section id="headerOne">
+
+        <div id="phoneIcon">
+  
+        <img  class="phoneIcon" src="{{url_for('static' , filename='assets/images/phoneIcon.png')}}" alt="phoneicon">
+        <p>+2348105132381</p>
+  
+        </div>
+  
+        
+  
+  
+        <img  id="emailIcon" src="{{url_for('static', filename= 'assets/images/emailicon.png')}}" alt="emailicon">
+        <p>
+          solkional@gmail.com
+        </p>
+  
+        <form action="" class="searchBar">
+  
+          <div id="formContainer">
+  
+          <input type="text" placeholder="Search... ">
+          <button class="submitSearch">  <i class="fas fa-search"></i></button>
+  
+  
+  
+          </div>
+  
+        </form>
+        
+  
+  
+      </section>
+      <header>
+        <nav>
+          <a href="{{url_for('home')}}">HOME</a>
+          <a href="{{url_for('about')}}">ABOUT</a>
+          <a href="{{url_for('books')}}" title="Click to view available books" >BOOKS</a>
+          <a href="https://www.google.com/">NEWS</a>
+          <a   href="{%if user_id%}
+        {{url_for('logout')}} 
+        {% else %}
+        {{url_for('login')}}
+        {%endif %}
+        " id="login"> 
+          LOGIN</a>
+        </nav>
+      </header>
+
+  <div class="container">
+    <h1>About Us</h1>
+    <p>Welcome to Solkiona TechHub, your destination for innovative technical solutions. As an emerging tech company, we're fueled by a passion for addressing complex technical challenges that businesses and individuals face today.</p>
+    
+    <p>At Solkiona TechHub, we believe that technology has the power to transform lives and drive progress. Our dedicated team of tech enthusiasts, experts, and problem solvers are committed to harnessing this potential and providing excellent solutions that exceed expectations.
+    
+    <h1>Our mission</h1>
+    <p> To empower our customers by offering top-notch, tailored solutions to the technical problems they present to us. Whether it's developing cutting-edge software, creating intuitive user interfaces, providing technical consultancy, or enhancing existing systems, we're here to make a positive impact.
+    
+    We pride ourselves on our commitment to innovation, quality, and customer satisfaction. With a blend of creativity, technical expertise, and a customer-centric approach, we're shaping a future where technology seamlessly integrates with everyday life, work, and business.
+    
+   <p>
+    As we embark on this journey, we invite you to explore our website and discover the range of services we offer. Join us in embracing the boundless possibilities of technology. If you have questions, ideas, or challenges, don't hesitate to connect with us. We're excited to collaborate and create together.
+  
+
+   </p> 
+    <div class="social-links">
+      <span class="social-link">
+        <a href="[your twitter link]">
+          <i class="fab fa-twitter"></i>
+          Follow us on Twitter @soladu1
+        </a>
+      </span>
+      <span class="social-link">
+        <a href="[your facebook link]">
+          <i class="fab fa-facebook"></i>
+          Like us on Facebook @solkionaTech_hub
+        </a>
+      </span>
+    </div>
+  </div>
+
+
+  <footer>
+    <p> &copy; All rights reserved | solkiona 2023</p>
+  </footer>
+  <script>
+    {%if user_id%}
+    let login = document.getElementById("login");
+    login.innerHTML ="LOGOUT";
+    {%endif %}
+  </script>
+</body>
+</html>

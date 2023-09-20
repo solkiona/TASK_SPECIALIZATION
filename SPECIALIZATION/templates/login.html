@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/stylesLogin.css')}}">
+    <script src="projectScripts.js"></script>
+    <script src="https://kit.fontawesome.com/475ea9865d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container">
+   
+    <div class="form-box">
+        <img src="{{url_for('static', filename='assets/images/logo.png')}}" alt="my_logo" />
+        <h1 id="title">Sign In</h1>
+        <form id="loginForm" method="post" >
+            <div class="input-group">
+                <div class="input-field" id="nameField">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text"name="username"  for="username" placeholder="Name" id="nameInput">
+                </div>
+            
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" name="email"  for="email" id="emailInput" required>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Password" name="password" for="password"
+                            id="passwordInput" required>
+                        </div>
+
+
+
+
+
+                </div>
+            </div>
+            <p>Lost password <a href="#" > Click Here!</a></p>
+        
+    </div>
+
+    <div class="btn-field">
+        
+        <button type="submit" class="disable" id="signinBtn" name = "signinBtn" value="Signin">Sign in</button>
+        <button type="submit" id="signupBtn" name = "signupBtn" value = "Signup">Sign up</button>
+    </div>
+
+  </form>
+
+
+</div>
+<script>
+
+    {% if alert_message%}
+        alert("{{alert_message}}");
+    {% endif %}
+
+   
+
+    let signupBtn = document.getElementById("signupBtn");
+    let signinBtn = document.getElementById("signinBtn");
+    let nameField = document.getElementById("nameField");
+    let title = document.getElementById("title");
+    nameField.style.maxHeight = "0";
+
+
+
+    signinBtn.onclick = function(){
+        nameField.style.maxHeight = "0";
+        title.innerHTML = "Sign In";
+        signupBtn.classList.add("disable");
+        signinBtn.classList.remove("disable");
+
+}
+
+
+
+signupBtn.onclick = function(){
+
+    nameField.style.maxHeight = "60px";
+    title.innerHTML = "Sign Up";
+    signupBtn.classList.remove("disable");
+    signinBtn.classList.add("disable");
+
+
+}
+
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    
+    <meta charset="utf-8">
+    <title> {%block title%}
+      {% endblock%}'s Mini Library</title>
+   
+    <link rel="icon" href="{{ url_for('static', filename='assets/images/icon.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/stylesDashboard.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/475ea9865d.js" crossorigin="anonymous"></script>
+ 
+   
+
+  </head>
+
+  <body>
+
+   
+    <section id="headerOne">
+
+      <div id="phoneIcon">
+
+      <img  class="phoneIcon" src="{{ url_for('static', filename='assets/images/phoneIcon.png')}}" >
+      <p>+2348105132381</p>
+
+      </div>
+
+      
+
+
+      <img  id="emailIcon" src="{{url_for('static',filename='assets/images/emailicon.png')}}" alt="emailicon">
+      <p>
+        solkional@gmail.com
+      </p>
+
+      <form action="" class="searchBar">
+
+        <div id="formContainer">
+
+        <input type="text" placeholder="Search... ">
+        <button class="submitSearch">  <i class="fas fa-search"></i></button>
+
+
+
+        </div>
+
+      </form>
+      
+
+
+    </section>
+
+    <div>
+   
+        {%block content%}
+
+        {%endblock%}
+    </div>
+    
+    {%block hr%}<hr>{%endblock%}
+
+    <div id="body">
+      <nav>
+        {%block nav%}
+       <a href="{{url_for('dashboard')}}"><i class="fa-solid fa-user" style="font-size: 25px; line-height: 50px; text-decoration: none"></i>DASHBOARD</a>
+        <a href="{{url_for('home')}}"> <i class="fa-solid fa-house" style="font-size: 25px; line-height: 50px; text-decoration: none"></i> HOME</a> 
+          <a href="{{url_for('about')}}"> <i class="fa-solid fa-address-card" style="font-size: 25px; line-height: 50px;text-decoration: none"></i>ABOUT</a>
+          <a href="{{url_for('books')}}" title="Click to view available books" > <i class="fa-solid fa-book-open-reader" style="font-size: 25px; line-height: 50px;text-decoration: none"></i>BOOKS</a>
+          <a href="{{url_for('addbooks')}}" id="addbooks"> <i class="fa-solid fa-book" style="font-size: 25px; line-height: 50px;text-decoration: none"></i> ADD BOOKS </a>
+         <a href="{{url_for('logout')}}"> <i class="fa-solid fa-right-from-bracket" style="font-size: 25px; line-height: 50px;text-decoration: none"></i> LOGOUT </a>
+
+         {%endblock%}
+      </nav>
+      {%block main%}
+      <div id="container">
+        
+        <div class="flex-container">
+          <div class="item1">
+            <p>Visitors</p>
+            <p><b>1294</b></p>
+          </div>
+          <div class="item2">
+            <p>Book Sales</p>
+            <p><b>$1345</b></p>
+          </div>
+          <div class="item3">
+            <p>Subcibers</p>
+            <p><b>$1303</b></p>
+          </div>
+          <div class="item4">
+            <p>Order</p>
+            <p><b>$576</b></p>
+          </div>
+        </div>
+      
+      
+        <div class="content">
+          <div class="task">
+            &nbsp;&nbsp;
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>ACCOUNT INFO</strong></p>
+            <div class="circle">
+              <p></p>
+            </div>
+          </div>
+          <div class="map">
+            &nbsp;&nbsp;
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Achievement</strong></p>
+          </div>
+        </div>
+      </div>
+      </div>
+      {%endblock%}
+      
+    
+
+    
+    <footer style="position: relative; bottom: 0px">
+      <p> &copy; All rights reserved | solkiona 2023</p>
+    </footer>
+    <script>
+    {%if user.admin == True%}
+
+  addbooks = document.getElementById('addbooks');
+  addbooks.style.display = "block";
+
+  {%else%}
+  addbooks.style.display="none";
+
+{%endif%}
+
+</script>
+   
+  </body>
+  
+</html>

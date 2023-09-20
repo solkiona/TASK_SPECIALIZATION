@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    
+
+
+  
+    <meta charset="utf-8">
+   
+    <link rel="icon" href="{{ url_for('static', filename='assets/images/icon.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/styles.css')}}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ 
+   
+
+  </head>
+
+  <body >
+
+   
+    <section id="headerOne">
+
+      <div id="phoneIcon">
+
+      <img  class="phoneIcon" src="{{ url_for('static', filename='assets/images/phoneIcon.png')}}" >
+      <p>+2348105132381</p>
+
+      </div>
+
+      
+
+
+      <img  id="emailIcon" src="{{url_for('static',filename='assets/images/emailicon.png')}}" alt="emailicon">
+      <p>
+        solkional@gmail.com
+      </p>
+
+      <form action="" class="searchBar">
+
+        <div id="formContainer">
+
+        <input type="text" placeholder="Search... ">
+        <button class="submitSearch">  <i class="fas fa-search"></i></button>
+
+
+
+        </div>
+
+      </form>
+      
+
+
+    </section>
+    <header>
+      <nav>
+        <a href="{{url_for('home')}}">HOME</a>
+        <a href="{{url_for('about')}}">ABOUT</a>
+        <a href="{{url_for('books')}}" title="Click to view available books" >BOOKS</a>
+        <a href="https://www.google.com">NEWS</a>
+        <a   href="{%if user_id%}
+        {{url_for('logout')}} 
+        {% else %}
+        {{url_for('login')}}
+        {%endif %}
+        " id="login"> 
+          LOGIN</a>
+      </nav>
+    </header>
+    <main class="container-div">
+
+      <div class="gridBooks">
+          
+          <a href="#">
+            <img  class="gridChild" src="{{url_for('static', filename='assets/images/book1.jpg')}}" alt="">
+            <p class="author"> BY: Harper Lee | 1960</p>
+          </a>
+          
+          <div  class="bookContent">
+
+            <h1>TO KILL A MOCKING BIRD</h1>
+
+
+            <p >
+              Set in the fictional town of Maycomb, Alabama, "To Kill a Mockingbird" follows the Finch family, primarily through the eyes of young Scout Finch. Her father, Atticus Finch, is a respected lawyer known for his integrity and his willingness to defend a black man, Tom Robinson, who is falsely accused of raping a white woman.
+  
+  The novel covers a period of three years, during which Scout and her brother Jem experience a series of events that challenge their understanding of the world and reveal the deeply rooted racial prejudices of their society. They befriend Dill, a young boy, and together they become captivated by the enigmatic figure of Boo Radley, a reclusive neighbor rumored to be mentally unstable. 
+ </p>
+
+ <p style="color: rgb(133, 127, 127); width: fit-content; display: inline-block; padding-right: 7px;" class="read">
+
+  <a href="{{url_for('login')}}" style="text-decoration: none; color: inherit; font-weight: bold" > SIGN UP</a> TO READ MORE ...          
+ </p>
+ <p class="download" style="display: inline-block;">
+  <a href="{{url_for('download_file', filename= 'Mobydick.docx')}}" style="text-decoration: none; color: rgb(100, 127, 120); font-weight: bold;" > DOWNLOAD FILE</a>
+ </p>
+
+
+          </div>
+          
+      </div>
+
+      <div class="gridBooks">
+          
+        <a href="#">
+          <img  class="gridChild" src="{{url_for('static', filename='assets/images/book2.jpg')}}" alt="">
+          <p class="author">  BY: Jane Austen | 1813 </p>
+        </a>  
+        <div  class="bookContent">
+
+          <h1>PRIDE AND PREJUDICE</h1>
+
+
+          <p >
+            "Pride and Prejudice" by Jane Austen is a Regency-era novel focusing on Elizabeth Bennet and her family. Mrs. Bennet seeks suitable husbands for her daughters, especially wealthy matches. When Mr. Bingley and Mr. Darcy enter their lives, romance and misunderstandings ensue. Elizabeth's initial prejudice against Darcy evolves as they confront societal norms and personal biases. The novel critiques class distinctions and emphasizes personal growth and genuine connections. Austen's wit and insight into human nature make "Pride and Prejudice" a timeless exploration of love and social commentary.</p>
+
+            <p style="color: rgb(133, 127, 127); width: fit-content; display: inline-block; padding-right: 7px;" class="read">
+
+              <a href="{{url_for('login')}}" style="text-decoration: none; color: inherit; font-weight: bold" > SIGN UP</a> TO READ MORE ...          
+             </p>
+             <p class="download" style="display: inline-block">
+              <a href="{{url_for('download_file', filename= 'PrideAndPrejudice.docx')}}" style="text-decoration: none; color: rgb(100, 127, 120); font-weight: bold;" > DOWNLOAD FILE</a>
+             </p>
+
+        </div>
+
+    </div>  
+
+    <div class="gridBooks">
+          
+      <a href="#">
+        <img  class="gridChild" src="{{url_for('static', filename='assets/images/book3.jpg')}}" alt="">
+        <p class="author"> BY: HERMAN MELVIELLE | 1851</p>
+      </a>  
+      <div  class="bookContent">
+
+        <h1>MOBY-DICK</h1>
+
+
+        <p >
+          Moby-Dick" by Herman Melville is an American classic set in the 19th century. It follows Ishmael, a sailor, and his obsession with Captain Ahab's quest for revenge against the white whale, Moby Dick, who had maimed Ahab. The novel delves into themes of fate, revenge, and man's relationship with nature. As the crew of the Pequod sets out on a whaling voyage, Ahab's relentless pursuit of the whale consumes him and leads to tragedy. The narrative is rich with symbolism and philosophical exploration, examining the human psyche and the primal forces of the sea. "Moby-Dick" is celebrated for its layered storytelling, iconic characters, and exploration of existential themes.
+        </p>
+
+          <p style="color: rgb(133, 127, 127); width: fit-content; display: inline-block; padding-right: 7px;" class="read">
+
+            <a href="{{url_for('login')}}" style="text-decoration: none; color: inherit; font-weight: bold" > SIGN UP</a> TO READ MORE ...          
+          </p>
+           <p class="download" style="display: inline-block">
+            <a href="{{url_for('download_file', filename= 'mobydick.docx')}}" style="text-decoration: none; color: rgb(100, 127, 120); font-weight: bold; margin-bottom: 20px;" > DOWNLOAD FILE</a>
+           </p>
+
+           
+
+      </div>
+      </div>
+
+
+{%for book in book_status%}
+  <div class="gridBooks">
+          
+    <a href="#">
+      <img  class="gridChild" src="{{url_for('static', filename='uploads/'+ book.coverImage )}}" alt="">
+      <p class="author"> BY: {{book.bookAuthor}} | {{book.yearPublished}}</p>
+    </a>  
+    <div  class="bookContent">
+
+      <h1>{{book.bookTitle}}</h1>
+
+
+      <p >
+        {{book.Description}}
+        </p>
+
+        <p style="color: rgb(133, 127, 127); width: fit-content; display: inline-block; padding-right: 7px;" class="read">
+
+          <a href="{{url_for('login')}}" style="text-decoration: none; color: inherit; font-weight: bold" > SIGN UP</a> TO READ MORE ...          
+         </p>
+         <p class="download" style="display: inline-block">
+          <a href="{{url_for('download_file', filename= book.filepath)}}" style="text-decoration: none; color: rgb(100, 127, 120); font-weight: bold;" > DOWNLOAD FILE</a>
+         </p> 
+         <form action="{{url_for('delete', book_id=book.id)}}" method="POST" style="display: inline-block ;background-color: none">
+         <p class="download" style="display: inline-block">
+          <input type="Submit" style="border: none; font-family: inherit;  font-weight: bold; margin: 0px; cursor: pointer; color: rgb(100, 127, 120); margin-left: 10px; background-color: none; display: inline-block" value="DELETE" >
+         </p> 
+        </form>
+
+    </div>
+</div>
+  {%endfor%}
+
+
+    </main>
+
+    
+    <footer style="position: relative; padding: 0px; bottom: 0px;">
+      <p> &copy; All rights reserved | solkiona 2023</p>
+    </footer>
+    <script>
+      {%if user_id%}
+      let login = document.getElementById("login");
+      login.innerHTML ="LOGOUT";
+      let Read = document.getElementsByClassName("read");
+      for(let i = 0; i < Read.length; i++){
+        Read[i].style.display = "None";
+      }
+      {%else%}
+      let Download = document.getElementsByClassName("download");
+      for  (let i = 0; i < Download.length; i++){
+        Download[i].style.display = "None";
+      }
+      {%endif %}
+    
+    </script>
+  </body>
+</html>

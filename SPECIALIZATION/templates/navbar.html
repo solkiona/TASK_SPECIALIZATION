@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mini Library</title>
+   
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="{{url_for('static', filename='assets/styles.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+
+  <body>
+    <section id="headerOne">
+
+      <div id="phoneIcon">
+
+      <img  class="phoneIcon" src="{{url_for('static', filename='assets/images/phoneIcon.png')}}" alt="phoneicon">
+      <p>+2348105132381</p>
+
+      </div>
+
+      
+
+
+      <img  id="emailIcon" src="{{url_for('static', filename='assets/images/emailicon.png')}}" alt="emailicon">
+      <p>
+        solkional@gmail.com
+      </p>
+
+
+      <form action="" class="searchBar">
+
+        <div id="formContainer">
+
+        <input type="text" placeholder="Search... ">
+        <button class="submitSearch">  <i class="fas fa-search"></i></button>
+
+
+
+        </div>
+
+      </form>
+      
+
+
+    </section>
+    <header>
+      <nav>
+        
+        <a href="{{url_for('home')}}" class="navA">HOME</a>
+        <a href="{{url_for('about')}}" class="navA">ABOUT</a>
+        <a href="{{url_for('books')}}" title="Click to view available books"  class="navA">BOOKS</a>
+        <a   href="{%if user_id%}
+        {{url_for('logout')}} 
+        {% else %}
+        {{url_for('login')}}
+        {%endif %}
+        " id="login"> 
+          LOGIN</a>
+        <a href="{{url_for('dashboard')}}" id="dashboard" class="navA">
+          DASHBOARD</a>
+      </nav>
+    </header>
+    <main>
+      <div class="imgContainer">
+
+        <div class="welcome-container">
+          <h1>Discover a Wealth of Knowledge</h1>
+        <p>Embark on a journey of enlightenment through our 
+          vast collection of books <br> From scientific breakthroughs to artistic
+           inspiration <br>the pages hold a world of wisdom waiting to be explored. 
+           <br>Uncover the treasures that lie within</p>
+           <p> Continue to discover MORE...</p>
+      </div>
+
+  
+
+      </div>
+
+      <div class="grid">
+        <a href="{{url_for('books')}}">
+          <img  class="gridChild" src="{{url_for('static', filename='/assets/images/book1.jpg')}}" alt="">
+          <p class="author"> BY: Harper Lee | 1960</p>
+        </a>
+        <a href="{{url_for('books')}}">
+          <img  class="gridChild" src="{{url_for('static', filename='/assets/images/book2.jpg')}}" alt="">
+          <p class="author">  BY: Jane Austen | 1813 </p>
+        </a>
+        <a href="{{url_for('books')}}">
+          <img  class="gridChild" src="{{url_for('static', filename='/assets/images/book3.jpg')}}" alt="">
+          <p class="author"> by Herman Melville | 1851</p>
+        </a>
+        <a href="{{url_for('books')}}">
+          <img  class="gridChild" src="{{url_for('static', filename='/assets/images/book4.jpg')}}" alt="">
+          <p class="author">  by Charlotte Brontë | 1847</p>
+        </a>
+        <a href="{{url_for('books')}}">
+          <img  class="gridChild" src="{{url_for('static', filename='/assets/images/book5.jpg')}}" alt="">
+          <p class="author">  Aldous Huxley | 1932</p>
+        </a>
+        <a href="{{url_for('books')}}">
+          <img  class="gridChild" src="{{url_for('static', filename='/assets/images/book6.jpg')}}" alt="">
+          <p class="author"> by J.D. Salinger | 1951</p>
+        </a>
+        <a href="{{url_for('books')}}">
+          <img  class="gridChild" src="{{url_for('static', filename='/assets/images/book7.jpg')}}" alt="">
+          <p class="author"> by J.R.R. Tolkien | 1955</p>
+        </a>
+        <a href="{{url_for('books')}}">
+          <img  class="gridChild" src="{{url_for('static' , filename='/assets/images/book8.jpeg')}}" alt="">
+          <p class="author"> Mary Shell | 1818</p>
+        </a>
+        <a href="{{url_for('books')}}">
+          <img  class="gridChild" src="{{url_for('static', filename='/assets/images/book9.jpg')}}" alt="">
+          <p class="author"> by J.R.R. Tolkien | 1937</p>
+        </a>
+        <a href="{{url_for('books')}}">
+          <img  class="gridChild" src="{{url_for('static', filename='/assets/images/book10.jpg')}}" alt="">
+          <p class="author"> by Emily Brontë | 1847</p>
+        </a>
+
+      </div>   
+
+    </main>
+    <p  class="readMore">To view and read more books click <a href="{{url_for('login')}}">HERE</a> to sign-up</p>
+    <footer>
+      <p> &copy; All rights reserved | solkiona 2023</p>
+    </footer>
+    <script>
+      {%if user_id%}
+      let login = document.getElementById("login");
+      login.innerHTML ="LOGOUT";
+      {%endif %}
+    </script>
+  </body>
+ 
+</html>

@@ -1,0 +1,65 @@
+{%extends 'base.html'%}
+
+{%block content %}
+
+<h1 style="width: auto; margin-left: 100px; padding-left: 30px;">
+    {%block title %}
+    Add a New Book
+    {%endblock%}
+</h1>
+
+<form method="post"  id="addBook" style="padding: 30px; box-sizing: border-box; width: auto; margin-left: 100px; padding-top: 0px" 
+action="/fileupload/" enctype="multipart/form-data">
+    
+
+    <p>
+       
+<input type="text" name="bookTitle"
+        placeholder="Book Title" class="binput">
+
+    </p>
+
+    <p>
+        <input type="text" name="bookAuthor" placeholder="Book Author" class="binput">
+    </p>
+
+    <p>
+        <input type="text" name="yearPublished" placeholder="Year Published" class="binput">
+    </p>
+
+    <p>
+        <label  style="padding-left: 5px"> Book Cover Image</label> <span style="color: rgb(159, 2, 112); font-size: 10px;" id="file1"> * Required file </span>
+        <input type="file" name="file1" placeholder="Cover Image" class="binput" required>
+    </p> 
+
+
+    <p>
+        <label  style="padding-left: 5px"> Attach File (PDF) </label> <span style="color:  rgb(159, 2, 112); font-size: 10px;" id="file2"> * Required file </span>
+        <input type="file" name="file2"  placeholder="Attach File" class="binput"  required>
+        </p>
+
+        <p>
+    
+                <textarea name="description" placeholder="Description" rows="15" cols="60" class="binput" > </textarea>
+            </p>
+        
+            <p> <button type="submit" value="Upload" > Submit </button>
+            </p>
+        </form>
+
+      <script>
+        /**
+        document.getElementById("file1").innerHTML = "* Required file"
+        {% if alert_message%}
+
+        document.getElementById("file1").innerHTML = "{{alert_message}}";
+        document.getElementById("file2").innerHTML = "{{alert_message}}"
+    {% endif %} **/
+      </script>
+        
+{%endblock%}
+{%block hr%}
+{%endblock%}
+{%block main%}
+
+{%endblock%}

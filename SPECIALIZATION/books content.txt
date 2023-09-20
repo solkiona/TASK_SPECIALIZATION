@@ -1,0 +1,127 @@
+<div class="gridBooks">
+          
+                <a href="books.html" class="gridImage">
+                  <img  class="gridChild" src=" {{url_for('static', filename= 'assets/images/book1.jpg')}}" alt="">
+                  <p class="author"> BY: Harper Lee | 1960</p>
+                </a>
+                
+                <div  class="bookContent">
+      
+                  <h1>TO KILL A MOCKING BIRD</h1>
+      
+      
+                  <p >
+                    Set in the fictional town of Maycomb, Alabama, "To Kill a Mockingbird" follows the Finch family, primarily through the eyes of young Scout Finch. Her father, Atticus Finch, is a respected lawyer known for his integrity and his willingness to defend a black man, Tom Robinson, who is falsely accused of raping a white woman.
+        
+        The novel covers a period of three years, during which Scout and her brother Jem experience a series of events that challenge their understanding of the world and reveal the deeply rooted racial prejudices of their society. They befriend Dill, a young boy, and together they become captivated by the enigmatic figure of Boo Radley, a reclusive neighbor rumored to be mentally unstable. 
+       </p>
+      
+       <p style="color: rgb(133, 127, 127)">
+      
+        <a href="login.html" style="text-decoration: none; color: rgb(79, 3, 55); font-weight: bold"> CLICK ME</a> TO DOWNLOAD
+       </p>
+      
+      
+                </div>
+                
+            </div>
+
+
+            <div class="gridBooks">
+          
+                <a href="books.html">
+                  <img  class="gridChild" src="{{url_for('static', filename= 'assets/images/book2.jpg')}}" alt="">
+                  <p class="author">  BY: Jane Austen | 1813 </p>
+                </a>  
+                <div  class="bookContent">
+        
+                  <h1>PRIDE AND PREJUDICE</h1>
+        
+        
+                  <p >
+                    "Pride and Prejudice" by Jane Austen is a Regency-era novel focusing on Elizabeth Bennet and her family. Mrs. Bennet seeks suitable husbands for her daughters, especially wealthy matches. When Mr. Bingley and Mr. Darcy enter their lives, romance and misunderstandings ensue. Elizabeth's initial prejudice against Darcy evolves as they confront societal norms and personal biases. The novel critiques class distinctions and emphasizes personal growth and genuine connections. Austen's wit and insight into human nature make "Pride and Prejudice" a timeless exploration of love and social commentary.</p>
+        
+        <p style="color: rgb(133, 127, 127)">
+        
+        <a href="login.html" style="text-decoration: none; color: inherit"> SIGN UP</a> TO READ MORE ...
+        </p>
+        
+        
+                </div>
+        
+            </div>  
+        
+            <div class="gridBooks">
+                  
+              <a href="books.html">
+                <img  class="gridChild" src="{{url_for('static', filename= 'assets/images/book3.jpg')}}" alt="">
+                <p class="author"> BY: HERMAN MELVIELLE | 1851</p>
+              </a>  
+              <div  class="bookContent">
+        
+                <h1>MOBY-DICK</h1>
+        
+        
+                <p >
+                  Moby-Dick" by Herman Melville is an American classic set in the 19th century. It follows Ishmael, a sailor, and his obsession with Captain Ahab's quest for revenge against the white whale, Moby Dick, who had maimed Ahab. The novel delves into themes of fate, revenge, and man's relationship with nature. As the crew of the Pequod sets out on a whaling voyage, Ahab's relentless pursuit of the whale consumes him and leads to tragedy. The narrative is rich with symbolism and philosophical exploration, examining the human psyche and the primal forces of the sea. "Moby-Dick" is celebrated for its layered storytelling, iconic characters, and exploration of existential themes.</p>
+        
+        <p style="color: rgb(133, 127, 127)">
+        
+        <a href="login.html" style="text-decoration: none; color: inherit"> SIGN UP</a> TO READ MORE ...
+        </p>
+        
+        
+              </div>
+          </div>
+        
+        
+          <div class="gridBooks">
+                  
+            <a href="books.html">
+              <img  class="gridChild" src="{{url_for('static', filename= 'assets/images/book4.jpg')}}" alt="">
+              <p class="author"> BY: CHARLOTTE BRONTE | 1847</p>
+            </a>  
+            <div  class="bookContent">
+        
+              <h1>JANE EYRE</h1>
+        
+        
+              <p>
+                Jane Eyre" by Charlotte Brontë is a classic 19th-century novel that follows the life of the orphaned titular character, Jane Eyre. Raised by an abusive aunt and sent to a harsh boarding school, Jane emerges as a resilient and independent woman. She becomes a governess at Thornfield Hall, where she develops a deep connection with the brooding and mysterious Mr. Rochester. The novel explores themes of social class, morality, and feminism. As Jane uncovers secrets about Rochester's past, she faces moral dilemmas and must make choices that align with her values. "Jane Eyre" is celebrated for its strong female protagonist, gothic atmosphere, and exploration of love and identity.</p>
+        
+        <p style="color: rgb(133, 127, 127)">
+        
+        <a href="login.html" style="text-decoration: none; color: inherit"> SIGN UP</a> TO READ MORE ...
+        </p>
+        
+        
+            </div>
+        </div>
+        
+        
+        
+        <div class="gridBooks">
+                  
+          <a href="books.html">
+            <img  class="gridChild" src="{{url_for('static', filename= 'assets/images/book5.jpg')}}" alt="">
+            <p class="author"> BY: ALDOUS HUXLEY | 1932</p>
+          </a>  
+          
+          <div  class="bookContent">
+        
+            <h1>BRAVE NEW WORLD</h1>
+        
+        
+            <p >
+              "Brave New World" by Aldous Huxley is a dystopian novel set in a future world driven by technological advancements and social engineering. In this society, citizens are conditioned from birth to conform and find contentment in a hedonistic lifestyle. Natural reproduction is replaced by artificial means, and social classes are strictly controlled to maintain stability. The story follows Bernard Marx, an outsider who questions the societal norms, and John "the Savage," who was born outside this controlled world. The novel delves into themes of individuality, freedom, and the consequences of a world driven by consumerism and pleasure. Huxley's work is a cautionary tale that explores the conflicts between personal desires and societal control, offering a chilling vision of a future where individuality is sacrificed for stability.
+        
+        </p>
+        
+        <p style="color: rgb(133, 127, 127)">
+        
+        <a href="login.html" style="text-decoration: none; color: inherit"> SIGN UP</a> TO READ MORE ...
+        </p>
+        
+        
+          </div>
+        </div>
